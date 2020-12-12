@@ -1,0 +1,29 @@
+version: "2.2"
+   
+services:
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: django
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+
+  celery:
+    build: .
+    command: celery -A rabbitmqcelery worker -l info
+    container_name: celery
+    volumes: 
+      - .:/code
+    depends_on: 
+      - django
+  
+  # rabbitmq:
+  #   build: .
+  #   command: bash -c "sudo apt-get install rabbimq-server && 
+  #                     sudo systemctl enable rabbitmq-server &&
+  #                     sudo systemctl start rabbitmq-server"
+  #   depends_on: 
+  #     - celery
+    
