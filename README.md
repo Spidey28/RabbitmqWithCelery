@@ -1,4 +1,4 @@
-**To install rabbit-mq:
+**To install rabbit-mq**:
 
 $`sudo apt-get install rabbimq-server`
 
