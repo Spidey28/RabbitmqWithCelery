@@ -2,7 +2,7 @@
 
 $`sudo apt-get install rabbimq-server`
 
-**To enable rabbit-mq:
+**To enable rabbit-mq**:
 
 $'sudo systemctl enable rabbitmq-server'
 
@@ -10,10 +10,10 @@ $'sudo systemctl enable rabbitmq-server'
 
 $'sudo systemctl start rabbitmq-server'
 
-**To check status:
+**To check status**:
 
 $'systemctl status rabbitmq-server'
 
-**To start Celery worker:
+**To start Celery worker**:
 
 $'celery -A rabbitmqcelery worker -l info'
