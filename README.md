@@ -1,19 +1,19 @@
-To install rabbit-mq:
+**To install rabbit-mq:
 
-$sudo apt-get install rabbimq-server
+$`sudo apt-get install rabbimq-server`
 
-To enable rabbit-mq:
+**To enable rabbit-mq:
 
-$sudo systemctl enable rabbitmq-server
+$'sudo systemctl enable rabbitmq-server'
 
-To start rabbit-mq:
+**To start rabbit-mq**:
 
-$sudo systemctl start rabbitmq-server
+$'sudo systemctl start rabbitmq-server'
 
-To check status:
+**To check status:
 
-$systemctl status rabbitmq-server
+$'systemctl status rabbitmq-server'
 
-To start Celery worker:
+**To start Celery worker:
 
-$celery -A rabbitmqcelery worker -l info
+$'celery -A rabbitmqcelery worker -l info'
